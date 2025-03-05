@@ -19,6 +19,8 @@
 		vertical-align: baseline;
 	}
 
+	
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -3113,7 +3115,7 @@
 
 		.wrapper.style2 {
 			background-color: #3498db;
-			color: #aed6f1;
+			color: white;
 		}
 
 			.wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
@@ -3720,6 +3722,7 @@
 		position: relative;
 		text-align: center;
 		overflow: hidden;
+		font-family: Arial, Helvetica, sans-serif;
 	}
 
 		#banner .inner {
