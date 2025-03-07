@@ -28,7 +28,7 @@ textarea {
     height: 150px;
 }
 button {
-    padding: 12px 20px;
+    padding: 10px -8px;
     font-size: 16px;
     background-color: #4CAF50;
     color: white;
@@ -37,6 +37,6 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: #45a049;
+    background-color: #62cd67;
 }
 
