@@ -41,6 +41,13 @@ h2 {
     color: #5A3D29;
 }
 
+/* Centrado del título de la Galería */
+.titulo-galeria {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
 /* Estilos de la Galería */
 .slider {
     width: 100%;
@@ -60,8 +67,10 @@ h2 {
 }
 
 .slide img {
-    width: 100%;
+    width: 60%; /* Reducción del tamaño de las imágenes */
     height: auto;
+    margin: 0 auto;
+    display: block;
 }
 
 footer {
