@@ -64,3 +64,6 @@ textarea {
 .reset-btn:hover {
   background-color: #545b62;
 }
+.container {
+  align-content: center;;
+}
