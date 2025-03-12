@@ -66,21 +66,21 @@ textarea {
 .btn-primary {
   background-color: #3498db;
   color: white;
+  padding: 10px -8px;
 }
 
 .btn-primary:hover {
   background-color: #0056b3;
-  padding: 10px -8px;
 }
 
 .btn-secondary {
   background-color: #3498db;
   color: white;
+  padding: 10px -8px;
 }
 
 .btn-secondary:hover {
   background-color: #0056b3;
-  padding: 10px -8px;
 }
 
 @media (max-width: 768px) {
