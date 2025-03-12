@@ -64,21 +64,21 @@ textarea {
 }
 
 .btn-primary {
-  background-color: #3498db;
+  background-color: #0056b3;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #01346b;
 }
 
 .btn-secondary {
-  background-color: #3498db;
+  background-color: #0056b3;
   color: white;
 }
 
 .btn-secondary:hover {
-  background-color: #0056b3;
+  background-color: #01346b;
 }
 
 @media (max-width: 768px) {
