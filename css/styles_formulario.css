@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+#Contacto h1 {
+  text-align: center;
+}
+
 .form-container {
   max-width: 600px;
   margin: 0 auto;
@@ -60,7 +64,7 @@ textarea {
 }
 
 .btn-primary {
-  background-color: ##3498db;
+  background-color: #3498db;
   color: white;
 }
 
@@ -69,12 +73,12 @@ textarea {
 }
 
 .btn-secondary {
-  background-color: ##3498db;
+  background-color: #3498db;
   color: white;
 }
 
 .btn-secondary:hover {
-  background-color: #545b62;
+  background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
