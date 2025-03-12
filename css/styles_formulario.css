@@ -5,6 +5,16 @@ body {
   margin: 0;
 }
 
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-form {
+  width: 100%;
+}
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -14,6 +24,7 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
 }
+
 .required {
   color: #ff0000;
 }
@@ -21,7 +32,7 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 60%;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -36,9 +47,10 @@ textarea {
 
 .form-actions {
   text-align: center;
+  margin-top: 20px;
 }
 
-.submit-btn, .reset-btn {
+.btn-primary, .btn-secondary {
   padding: 10px 20px;
   margin: 0 10px;
   border: none;
@@ -47,20 +59,38 @@ textarea {
   font-size: 16px;
 }
 
-.submit-btn {
+.btn-primary {
   background-color: #007bff;
   color: white;
 }
 
-.submit-btn:hover {
+.btn-primary:hover {
   background-color: #0056b3;
 }
 
-.reset-btn {
+.btn-secondary {
   background-color: #6c757d;
   color: white;
 }
 
-.reset-btn:hover {
+.btn-secondary:hover {
   background-color: #545b62;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 10px;
+  }
+  
+  body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
 }
