@@ -3874,7 +3874,7 @@
 			opacity: 1;
 		}
 
-		
+
 /* Footer */
 #footer {
     background-color: #ffffff;
@@ -3898,9 +3898,9 @@
 .logos {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que los logos se ajusten en múltiples filas */
-    gap: 10px; /* Espaciado entre los logos */
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -3914,73 +3914,61 @@
     margin-top: 10px;
 }
 
-/* Imagen del footer */
 footer img {
-    height: auto; /* Ajusta la altura automáticamente */
-    width: auto; /* Mantiene las proporciones */
-    object-fit: contain; /* Evita la distorsión de la imagen */
-    max-width: 100%; /* Asegura que no exceda el contenedor */
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-/* Media Queries */
-
-/* Pantallas medianas (1280px o menos) */
+/* Media queries para responsividad */
 @media screen and (max-width: 1280px) {
     #footer > .inner {
-        max-width: 65em; /* Reduce el ancho máximo del contenedor */
+        max-width: 65em;
     }
 }
 
-/* Pantallas pequeñas (980px o menos) */
 @media screen and (max-width: 980px) {
     #footer > .inner {
-        width: 90%; /* Usa un porcentaje para mayor adaptabilidad */
-        padding: 0 15px; /* Reduce el padding horizontal */
+        width: 90%;
+    }
+    
+    .logo {
+        max-width: 450px;
     }
 }
 
-/* Pantallas muy pequeñas (736px o menos) */
 @media screen and (max-width: 736px) {
     #footer {
-        padding: 2em 1em; /* Reduce el espacio alrededor del footer */
+        padding: 3em 1em 1em 1em;
     }
-
+    
     .logo {
-        max-width: 450px; /* Ajusta el tamaño máximo de los logos */
-        margin-bottom: 10px; /* Espaciado entre logos y otros elementos */
+        max-width: 350px;
     }
-
+    
     #footer p {
-        font-size: 13px; /* Reduce ligeramente el tamaño del texto */
-        margin-top: 8px; /* Acerca la frase al logo */
+        font-size: 13px;
     }
 }
 
-/* Pantallas móviles (480px o menos) */
 @media screen and (max-width: 480px) {
     #footer {
-        padding: 1.5em 1em; /* Ajusta el padding para móviles pequeños */
-        text-align: center; /* Asegura que todo esté centrado correctamente */
+        padding: 2em 1em 1em 1em;
     }
 
     footer img {
-        content: url("../../images/footer-mob.jpg"); /* Imagen específica para móviles */
-        max-height: 80px; /* Limita la altura de la imagen en móviles */
-        width: auto; /* Mantiene las proporciones de la imagen */
-        height: auto;
-        object-fit: contain;
-        margin-bottom: 10px; /* Espaciado entre la imagen y otros elementos */
+        content: url("../../images/footer-mob.jpg");
+        max-height: 80px;
     }
 
     .logo {
-        max-width: 100%; /* Logos ocupan todo el ancho disponible en móviles */
-        margin-bottom: 10px; /* Espaciado adicional para evitar saturación visual */
+        max-width: 100%;
     }
 
     #footer p {
-        font-size: 12px; /* Texto más pequeño en móviles para mejor legibilidad */
-        margin-top: 5px; /* Acerca la frase al logo aún más en pantallas pequeñas */
+        font-size: 12px;
     }
 }
+
 
 
