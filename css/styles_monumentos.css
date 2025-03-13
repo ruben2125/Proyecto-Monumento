@@ -160,7 +160,7 @@ footer img {
     }
 
     footer img {
-        content: url("../../images/footer-mob.jpg");
+        content: url("../images/footer-mob.jpg");
         max-height: 80px;
     }
 
