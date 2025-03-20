@@ -104,9 +104,11 @@
 						<div class="col col2">
 							<h2>MAPA TURÍSTICO</h2>
 							<p>Este mapa detallado y colorido, resalta los principales monumentos y sitios de interés de La Guardia de Jaén, sirviendo como guía visual para los visitantes. <br><br>Destaca la Iglesia de San Pedro, un templo central de arquitectura tradicional andaluza, junto a plazas como la de San Pedro y la de la Constitución, marcadas en tonos naranjas para las zonas históricas y peatonales. También se señalan el Antiguo Convento de Santo Domingo, el Lavadero Público de la II República y el conjunto histórico Plaza Isabel II, todos representados como puntos clave del patrimonio local. Áreas recreativas y naturales rodean el núcleo urbano, ofreciendo vistas panorámicas, mientras carreteras grises y negras facilitan el acceso. Los símbolos rojos indican museos, ermitas y otros lugares históricos. <br><br></p>
+							<!-- Botón que abre Google Maps -->
 							<a href="https://maps.app.goo.gl/J6SWR3fPx1S4wJQj9" class="button">ABRIR EN GOOGLE MAPS</a>
-							<a href="images/mapa.jpg" class="button">ABRIR MAPA</a>
 							
+							<!-- Botón que abre el mapa en un modal -->
+							<a href="javascript:void(0)" class="button open-modal" data-image="images/mapa.jpg">ABRIR MAPA</a>
 						</div>
 						<div class="col col1 first">
 							<!-- Imagen del mapa que abrirá el modal -->
@@ -190,15 +192,17 @@
 			modalContent.classList.add('modal-content');
 			modal.appendChild(modalContent);
 
-			// Seleccionamos la imagen del mapa
-			var mapImage = document.querySelector('.open-modal');
+			// Seleccionamos todos los enlaces con la clase 'open-modal'
+			var openModalButtons = document.querySelectorAll('.open-modal');
 
-			// Cuando se hace clic en la imagen del mapa
-			mapImage.addEventListener('click', function(event) {
-				event.preventDefault();
-				var imageUrl = this.getAttribute('src');  // Obtener la imagen
-				modal.style.display = 'block';  // Mostrar el modal
-				modalContent.innerHTML = '<img src="' + imageUrl + '" style="width:100%;">';  // Insertar la imagen en el modal
+			// Cuando se hace clic en el enlace del mapa
+			openModalButtons.forEach(function(button) {
+				button.addEventListener('click', function(event) {
+					event.preventDefault();
+					var imageUrl = this.getAttribute('data-image');  // Obtener la URL de la imagen
+					modal.style.display = 'block';  // Mostrar el modal
+					modalContent.innerHTML = '<img src="' + imageUrl + '" style="width:100%;">';  // Insertar la imagen en el modal
+				});
 			});
 
 			// Cerrar el modal si se hace clic fuera de la imagen
