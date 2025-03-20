@@ -8,7 +8,7 @@ body {
 h1 {
   text-align: center;
   font-size: 2rem;  /* Ajusta el tamaño del título */
-  color: #333;
+  color: black;
   white-space: nowrap;  /* Evita el salto de línea */
   margin-bottom: 20px;
 }
