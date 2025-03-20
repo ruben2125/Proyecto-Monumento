@@ -7,6 +7,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<link rel="stylesheet" href="css/styles_formulario.css">
+		<style>
+			/* Estilos para el modal */
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 1;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.7);
+			}
+
+			.modal-content {
+				margin: 15% auto;
+				display: block;
+				width: 80%;
+				max-width: 700px;
+			}
+
+			/* Estilo opcional para la imagen */
+			.image img {
+				cursor: pointer;
+			}
+		</style>
 	</head>
 	<body>
 		<!-- Header -->
@@ -84,8 +109,9 @@
 							
 						</div>
 						<div class="col col1 first">
+							<!-- Imagen del mapa que abrirá el modal -->
 							<div class="image round fit">
-								<a href="images/mapa.jpg" class="link"><img src="images/mapa.jpg" alt="mapa" style="max-width: 100%; height: auto;"></a>
+								<img src="images/mapa.jpg" alt="mapa" class="open-modal" style="max-width: 100%; height: auto;">
 							</div>
 						</div>
 					</div>
@@ -151,5 +177,36 @@
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<!-- JavaScript para el modal -->
+		<script>
+			// Crear el modal dinámicamente
+			var modal = document.createElement('div');
+			modal.id = 'myModal';
+			modal.classList.add('modal');
+			document.body.appendChild(modal);
+
+			var modalContent = document.createElement('span');
+			modalContent.classList.add('modal-content');
+			modal.appendChild(modalContent);
+
+			// Seleccionamos la imagen del mapa
+			var mapImage = document.querySelector('.open-modal');
+
+			// Cuando se hace clic en la imagen del mapa
+			mapImage.addEventListener('click', function(event) {
+				event.preventDefault();
+				var imageUrl = this.getAttribute('src');  // Obtener la imagen
+				modal.style.display = 'block';  // Mostrar el modal
+				modalContent.innerHTML = '<img src="' + imageUrl + '" style="width:100%;">';  // Insertar la imagen en el modal
+			});
+
+			// Cerrar el modal si se hace clic fuera de la imagen
+			window.onclick = function(event) {
+				if (event.target === modal) {
+					modal.style.display = 'none';
+				}
+			};
+		</script>
 	</body>
 </html>
