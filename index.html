@@ -7,27 +7,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<link rel="stylesheet" href="css/styles_formulario.css">
-		<style>
-			/* Estilos para el modal */
-			.modal {
-				display: none;
-				position: fixed;
-				z-index: 1;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0, 0, 0, 0.7);
-			}
-
-			.modal-content {
-				margin: 15% auto;
-				display: block;
-				width: 80%;
-				max-width: 700px;
-			}
-
-		</style>
 	</head>
 	<body>
 		<!-- Header -->
@@ -101,15 +80,16 @@
 							<h2>MAPA TURÍSTICO</h2>
 							<p>Este mapa detallado y colorido, resalta los principales monumentos y sitios de interés de La Guardia de Jaén, sirviendo como guía visual para los visitantes. <br><br>Destaca la Iglesia de San Pedro, un templo central de arquitectura tradicional andaluza, junto a plazas como la de San Pedro y la de la Constitución, marcadas en tonos naranjas para las zonas históricas y peatonales. También se señalan el Antiguo Convento de Santo Domingo, el Lavadero Público de la II República y el conjunto histórico Plaza Isabel II, todos representados como puntos clave del patrimonio local. Áreas recreativas y naturales rodean el núcleo urbano, ofreciendo vistas panorámicas, mientras carreteras grises y negras facilitan el acceso. Los símbolos rojos indican museos, ermitas y otros lugares históricos. <br><br></p>
 							<!-- Botón que abre Google Maps -->
-							<a href="https://www.google.com/maps/place/La+Guardia+de+Jaén" class="button" target="_blank">ABRIR EN GOOGLE MAPS</a>
+							<a href="https://www.google.com/maps/place/La+Guardia+de+Jaén" class="button">ABRIR EN GOOGLE MAPS</a>
 							
 							<!-- Botón que abre el mapa en un modal -->
-							<a href="javascript:void(0)" class="button open-modal" data-image="images/mapa.jpg">ABRIR MAPA</a>
+							<a href="images/mapa.jpg" class="button">ABRIR MAPA</a>
 						</div>
 						<div class="col col1 first">
 							<!-- Imagen del mapa que abrirá el modal -->
 							<div class="image round fit">
-								<img src="images/mapa.jpg" alt="mapa" class="open-modal" style="max-width: 100%; height: auto;">
+							<a href="images/mapa.jpg" class="link"><img src="images/mapa.jpg" alt="mapa" style="max-width: 100%; height: auto;"></a>
+
 							</div>
 						</div>
 					</div>
@@ -175,38 +155,6 @@
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-
-		<!-- JavaScript para el modal -->
-		<script>
-			// Crear el modal dinámicamente
-			var modal = document.createElement('div');
-			modal.id = 'myModal';
-			modal.classList.add('modal');
-			document.body.appendChild(modal);
-
-			var modalContent = document.createElement('span');
-			modalContent.classList.add('modal-content');
-			modal.appendChild(modalContent);
-
-			// Seleccionamos todos los enlaces con la clase 'open-modal'
-			var openModalButtons = document.querySelectorAll('.open-modal');
-
-			// Cuando se hace clic en el enlace del mapa
-			openModalButtons.forEach(function(button) {
-				button.addEventListener('click', function(event) {
-					event.preventDefault();
-					var imageUrl = this.getAttribute('data-image');  // Obtener la URL de la imagen
-					modal.style.display = 'block';  // Mostrar el modal
-					modalContent.innerHTML = '<img src="' + imageUrl + '" style="width:100%;">';  // Insertar la imagen en el modal
-				});
-			});
-
-			// Cerrar el modal si se hace clic fuera de la imagen
-			window.onclick = function(event) {
-				if (event.target === modal) {
-					modal.style.display = 'none';
-				}
-			};
-		</script>
+				
 	</body>
 </html>
