@@ -5,8 +5,12 @@ body {
   margin: 0;
 }
 
-#contacto h1 {
+h1 {
   text-align: center;
+  font-size: 2rem;  /* Ajusta el tamaño del título */
+  color: #333;
+  white-space: nowrap;  /* Evita el salto de línea */
+  margin-bottom: 20px;
 }
 
 .form-container {
