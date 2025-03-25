@@ -3226,7 +3226,7 @@
 			}
 
 				#header > a[href="#menu"]:before {
-					content: "";
+					content: "☰";
 					-moz-osx-font-smoothing: grayscale;
 					-webkit-font-smoothing: antialiased;
 					font-family: FontAwesome;
