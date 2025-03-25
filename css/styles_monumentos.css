@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    text-align: justify;
 }
 
 header {
@@ -19,21 +20,39 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 1.8em;
+}
+
+/* Estilo para la sección "información" */
+#informacion {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/* Estilo para el encabezado <h2> dentro de la sección "información" */
+#informacion h2 {
+    margin-bottom: 20px;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    background-color: #265d82;
+    border-radius: 5px;
 }
 
 section {
@@ -48,7 +67,7 @@ h2 {
 /* Centrado del título de la Galería */
 .titulo-galeria {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
@@ -71,12 +90,11 @@ h2 {
 }
 
 .slide img {
-    width: 60%; /* Reducción del tamaño de las imágenes */
+    width: 100%;
     height: auto;
     margin: 0 auto;
     display: block;
 }
-
 
 /* Footer */
 #footer {
@@ -85,17 +103,10 @@ h2 {
     padding: 20px 0;
 }
 
-#footer > .inner {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 80em;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logos {
@@ -125,38 +136,87 @@ footer img {
 
 /* Media queries para responsividad */
 @media screen and (max-width: 1280px) {
-    #footer > .inner {
-        max-width: 65em;
+    .footer-content {
+        max-width: 90%;
     }
 }
 
 @media screen and (max-width: 980px) {
-    #footer > .inner {
-        width: 90%;
+    header h1 {
+        font-size: 1.5em;
     }
-    
+
+    #informacion {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+
     .logo {
         max-width: 450px;
     }
 }
 
 @media screen and (max-width: 736px) {
-    #footer {
-        padding: 3em 1em 1em 1em;
+    header h1 {
+        font-size: 1.3em;
     }
-    
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+        padding: 5px 8px;
+    }
+
+    #informacion {
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+
+    .slide img {
+        width: 80%;
+    }
+
+    #footer {
+        padding: 15px 0;
+    }
+
     .logo {
         max-width: 350px;
     }
-    
+
     #footer p {
         font-size: 13px;
     }
 }
 
 @media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    nav ul li a {
+        font-size: 0.8em;
+        padding: 4px 6px;
+    }
+
+    #informacion {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .slide img {
+        width: 100%;
+    }
+
     #footer {
-        padding: 2em 1em 1em 1em;
+        padding: 10px 0;
     }
 
     footer img {
