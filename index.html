@@ -9,6 +9,7 @@
 		<title>MONUMENTOS LA GUARDIA DE JAÉN</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="css/styles_index.css">
         <link rel="stylesheet" href="css/styles_formulario.css">
@@ -83,28 +84,85 @@
 			</section>
 		
 			<!-- Section Mapa -->
-			<section class="wrapper style2" id="mapa">
-				<div class="inner">
-					<div class="flex flex-2">
-						<div class="col col2">
-							<h2>MAPA TURÍSTICO</h2>
-							<p>Este mapa detallado y colorido, resalta los principales monumentos y sitios de interés de La Guardia de Jaén, sirviendo como guía visual para los visitantes. <br><br>Destaca la Iglesia de San Pedro, un templo central de arquitectura tradicional andaluza, junto a plazas como la de San Pedro y la de la Constitución, marcadas en tonos naranjas para las zonas históricas y peatonales. También se señalan el Antiguo Convento de Santo Domingo, el Lavadero Público de la II República y el conjunto histórico Plaza Isabel II, todos representados como puntos clave del patrimonio local. Áreas recreativas y naturales rodean el núcleo urbano, ofreciendo vistas panorámicas, mientras carreteras grises y negras facilitan el acceso. Los símbolos rojos indican museos, ermitas y otros lugares históricos. <br><br></p>
-							<!-- Botón que abre Google Maps -->
-							<a href="https://www.google.com/maps/place/La+Guardia+de+Jaén" class="button">ABRIR EN GOOGLE MAPS</a>
-							
-							<!-- Botón que abre el mapa en un modal -->
-							<a href="images/mapa.jpg" class="button">ABRIR MAPA</a>
-						</div>
-						<div class="col col1 first">
-							<!-- Imagen del mapa que abrirá el modal -->
-							<div class="image round fit">
-							<a href="images/mapa.jpg" class="link"><img src="images/mapa.jpg" alt="mapa" style="max-width: 100%; height: auto;"></a>
+<section class="wrapper style2" id="mapa">
+    <div class="inner">
+        <div class="flex flex-2">
+            <div class="col col2">
+                <h2>MAPA TURÍSTICO</h2>
+                <p>Este mapa detallado y colorido, resalta los principales monumentos y sitios de interés de La Guardia de Jaén, sirviendo como guía visual para los visitantes. <br><br>Destaca la Iglesia de San Pedro, un templo central de arquitectura tradicional andaluza, junto a plazas como la de San Pedro y la de la Constitución, marcadas en tonos naranjas para las zonas históricas y peatonales. También se señalan el Antiguo Convento de Santo Domingo, el Lavadero Público de la II República y el conjunto histórico Plaza Isabel II, todos representados como puntos clave del patrimonio local. Áreas recreativas y naturales rodean el núcleo urbano, ofreciendo vistas panorámicas, mientras carreteras grises y negras facilitan el acceso. Los símbolos rojos indican museos, ermitas y otros lugares históricos. <br><br></p>
+                <!-- Botón que abre Google Maps -->
+                <a href="https://www.google.com/maps/place/La+Guardia+de+Jaén" class="button">ABRIR EN GOOGLE MAPS</a>
+                
+                <!-- Botón que abre el mapa en un modal -->
+                <a href="#" class="button" onclick="openModal('images/mapa.jpg')">ABRIR MAPA</a>
+            </div>
+            <div class="col col1 first">
+                <!-- Imagen del mapa que abrirá el modal -->
+                <div class="image round fit">
+                    <a href="#" onclick="openModal('images/mapa.jpg')"><img src="images/mapa.jpg" alt="mapa" style="max-width: 100%; height: auto;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    function openModal(imageSrc) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = imageSrc;
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+</script>
 
 			<!-- Section Contacto -->
 			<section class="wrapper style3" id="contacto">
@@ -156,6 +214,7 @@
                     </div>
                 </div>
 			</footer>
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
