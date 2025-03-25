@@ -57,7 +57,7 @@
 }
 
 #menu > ul.links > li:hover {
-  color: #3498db;
+  color: #265d82;
 }
 
 #menu > ul.links > li:first-child > a:not(.button) {
@@ -92,7 +92,7 @@
 }
 
 #menu .close:hover {
-  color: #3498db;
+  color: #265d82;
 }
 
 @media screen and (max-width: 736px) {
@@ -313,7 +313,7 @@
   }
   
   #footer p {
-      margin: 20px;
+      margin: 5px;
   }
 
   @media screen and (max-width: 768px) {
