@@ -236,7 +236,7 @@ footer img {
 /* Estilo para la galería y las flechas */
 .slider {
     position: relative;
-    max-width: 100%;
+    max-width: 500px;
     margin: auto;
     overflow: hidden;
 }
@@ -252,7 +252,7 @@ footer img {
 }
 
 .slide img {
-    width: 30%;
+  
     height: auto;
 }
 
