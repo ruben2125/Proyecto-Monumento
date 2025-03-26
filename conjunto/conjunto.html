@@ -49,8 +49,10 @@
     <section id="galeria">
         <h2>Galería de Imágenes</h2>
         <div class="slider">
+            <!-- Flecha izquierda -->
+            <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+    
             <div class="slides">
-                
                 <div class="slide">
                     <img src="../Imagenes WEBP/imagen2conjunto.webp" alt="Imagen 2">
                 </div>
@@ -76,9 +78,12 @@
                     <img src="../Imagenes WEBP/imagen9conjunto.webp" alt="Imagen 9">
                 </div>
             </div>
-            
+    
+            <!-- Flecha derecha -->
+            <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
+    
 
     <!-- Footer -->
 		<footer id="footer">
