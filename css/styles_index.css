@@ -140,7 +140,9 @@
 	-moz-justify-content: center;
 	-webkit-justify-content: center;
 	-ms-justify-content: center;
-	justify-content: center;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 6em 0 2em 0; /* Reducir el padding inferior */
 	background-image: url("../images/fondo.jpg");
 	background-image: -webkit-image-set(
 	  url("../images/laguardiafondo-low.jpg") 1x,
@@ -174,18 +176,30 @@
 	opacity: 1;
 	position: relative;
 	z-index: 2;
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
   }
   
   #banner h1 {
 	font-size: 4em;
-	margin-bottom: .25em;
+	margin-top: 0.1em; /* Subir el h1 */
+    margin-bottom: 0.5em;
 	color: #FFF;
   }
   
   #banner p {
 	color: #ffffff;
 	font-size: 1.75em;
+	margin-bottom: 2em; /* Añadir espacio debajo del párrafo */
   }
+
+  #banner .button {
+    margin-top: auto; /* Empujar el botón hacia abajo */
+    margin-bottom: 2em; /* Espacio en la parte inferior */
+}
   
   @-moz-keyframes more {
 	0% { bottom: -3em; }
