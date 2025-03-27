@@ -238,9 +238,11 @@
 	  width: 100%;
 	}
 	#banner h1 {
-	  font-size: 1.5em;
+	  font-size: 1.2em;
 	  margin-bottom: 0.5em;
 	  padding-bottom: 0;
+	  text-align: center;
+
 	}
 	#banner p {
 	  font-size: 1.25em;
