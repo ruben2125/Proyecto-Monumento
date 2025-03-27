@@ -1,4 +1,3 @@
-/* Estilos para el mensaje de cookies */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,58 +8,57 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: calc(100% - 20px); /* Ajustamos el ancho para dar margen */
-    margin-right: 20px; /* Margen a la derecha */
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
-    text-align: left; /* Alineamos el texto a la izquierda */
-    padding: 15px;
-    font-size: 14px;
     z-index: 1000;
+    display: none; /* Inicialmente oculto */
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
-    align-items: center; /* Alineamos verticalmente el icono y el texto */
-    justify-content: space-between; /* Espacio entre el icono, texto y botones */
+    justify-content: space-between;
+    align-items: center;
 }
 
-.cookie-banner i {
-    font-size: 24px; /* Tamaño del icono */
-    margin-right: 10px; /* Espacio entre el icono y el texto */
-    vertical-align: middle; /* Alinea el icono verticalmente con el texto */
+.cookie-text {
+    display: flex;
+    align-items: center;
 }
 
-.cookie-banner p {
+.cookie-text i {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.cookie-text p {
     margin: 0;
-    padding-bottom: 10px;
-    flex-grow: 1; /* Hace que el texto ocupe el espacio restante */
-    padding-right: 15px; /* Añadimos espacio entre el texto y los botones */
-    display: inline-block; /* Hace que el texto se muestre en línea con el icono */
+    font-size: 14px;
 }
 
-.cookie-banner a {
+.cookie-text a {
     color: #FFD700;
     text-decoration: none;
 }
 
-.cookie-banner a:hover {
+.cookie-text a:hover {
     text-decoration: underline;
-}
-
-.cookie-section {
-    display: flex;
 }
 
 .cookie-buttons {
     display: flex;
-    justify-content: center; /* Centra los botones horizontalmente */
-    gap: 10px; /* Espacio entre los botones */
+    gap: 10px;
 }
 
-.accept-cookies,
-.reject-cookies {
-    font-size: 16px;
+.cookie-button {
+    font-size: 14px;
     cursor: pointer;
     border: none;
     color: white;
+    transition: background-color 0.3s;
 }
 
 .accept-cookies {
@@ -78,4 +76,18 @@ body {
 .reject-cookies:hover {
     background-color: #b51919;
 }
+
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cookie-buttons {
+        margin-top: 15px;
+    }
+}
+
+
+
 

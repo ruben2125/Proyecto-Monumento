@@ -1,19 +1,25 @@
-// Esperamos que el contenido de la página se cargue completamente
 document.addEventListener('DOMContentLoaded', function() {
-    // Revisamos si ya se aceptaron las cookies
-    if (localStorage.getItem('cookies-accepted') === 'true') {
-        // Si ya se aceptaron, ocultamos el banner
-        document.getElementById('cookie-banner').style.display = 'none';
-    } else {
-        // Si no se aceptaron, mostramos el banner
-        document.getElementById('cookie-banner').style.display = 'block';
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptButton = document.getElementById('accept-cookies');
+    const rejectButton = document.getElementById('reject-cookies');
+
+    // Función para ocultar el banner
+    function hideBanner() {
+        cookieBanner.style.display = 'none';
     }
 
-    // Evento para aceptar las cookies
-    document.getElementById('accept-cookies').addEventListener('click', function() {
-        // Guardamos en localStorage que el usuario aceptó las cookies
-        localStorage.setItem('cookies-accepted', 'true');
-        // Ocultamos el banner
-        document.getElementById('cookie-banner').style.display = 'none';
+    // Mostrar el banner al cargar la página
+    cookieBanner.style.display = 'block';
+
+    // Evento para el botón de aceptar
+    acceptButton.addEventListener('click', function() {
+        alert('Has aceptado las cookies.');
+        hideBanner();
+    });
+
+    // Evento para el botón de rechazar
+    rejectButton.addEventListener('click', function() {
+        alert('Has rechazado las cookies.');
+        hideBanner();
     });
 });
