@@ -57,7 +57,6 @@ body {
 
 .accept-cookies,
 .reject-cookies {
-    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border: none;
