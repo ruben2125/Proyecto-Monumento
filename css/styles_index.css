@@ -141,19 +141,19 @@
 	-webkit-justify-content: center;
 	-ms-justify-content: center;
 	justify-content: center;
-	background-image: url("../images/laguardiafondo-low.jpg");
+	background-image: url("../images/fondo.jpg");
 	background-image: -webkit-image-set(
 	  url("../images/laguardiafondo-low.jpg") 1x,
-	  url("../images/laguardiafondo.jpg") 2x
+	  url("../images/fondo.jpg") 2x
 	);
 	background-image: image-set(
 	  url("../images/laguardiafondo-low.jpg") 1x,
-	  url("../images/laguardiafondo.jpg") 2x
+	  url("../images/fondo.jpg") 2x
 	);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-color: #f0f0f0;
+	background-color: #ffffff;
 	border-top: 0;
 	min-height: 100vh;
 	height: 100vh !important;
@@ -183,7 +183,7 @@
   }
   
   #banner p {
-	color: rgba(255, 255, 255, 0.85);
+	color: #ffffff;
 	font-size: 1.75em;
   }
   
