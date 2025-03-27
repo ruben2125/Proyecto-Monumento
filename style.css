@@ -62,11 +62,11 @@ body {
 }
 
 .accept-cookies {
-    background-color: #1caf4f;
+    background-color: #0d7a2e;
 }
 
 .accept-cookies:hover {
-    background-color: #179c3f;
+    background-color: #0a5f23;
 }
 
 .reject-cookies {
