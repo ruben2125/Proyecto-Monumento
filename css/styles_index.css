@@ -386,3 +386,9 @@
 	}
   }
   
+  #monumentos .col p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
