@@ -85,6 +85,14 @@ body {
 
     .cookie-buttons {
         margin-top: 15px;
+        padding: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .cookie-buttons {
+        margin-top: 15px;
+        padding: 1;
     }
 }
 
