@@ -7,11 +7,20 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 2.5rem;  /* Ajusta el tamaño del título */
+  font-size: 2.5rem; /* Tamaño moderado para el título principal */
   color: black;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-weight: 700;
-  ;
+  white-space: nowrap; /* Evita saltos de línea */
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.8rem; /* Tamaño pequeño para subtítulos */
+  color: black;
+  margin-bottom: 10px;
+  font-weight: 600; /* Negrita moderada */
+  white-space: nowrap; /* Evita saltos de línea */
 }
 
 .form-container {
@@ -82,11 +91,15 @@ textarea {
     padding: 10px;
   }
   
-  body {
-    font-size: 16px;
+  h1 {
+    font-size: 1.4rem; /* Ajusta el tamaño del h1 en pantallas pequeñas */
   }
   
-   h1 {
-    font-size: 20px;
+  h3 {
+    font-size: 1.2rem; /* Ajusta el tamaño del h3 en pantallas pequeñas */
+  }
+  
+  body {
+    font-size: 16px;
   }
 }

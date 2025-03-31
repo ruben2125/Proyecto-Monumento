@@ -8,9 +8,17 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    text-align: justify;
+    text-align: justify; /* Justifica el texto en todo el cuerpo */
 }
 
+/* Estilo para los párrafos */
+p {
+    font-size: 16px; /* Tamaño de fuente estándar */
+    line-height: 1.8; /* Aumenta la altura de línea para mayor legibilidad */
+    margin: 20px 10%; /* Márgenes más amplios a izquierda y derecha */
+}
+
+/* Encabezado */
 header {
     background-color: #265d82;
     color: white;
@@ -23,17 +31,18 @@ header h1 {
     font-size: 3em; /* Título más grande que los botones */
 }
 
-/* Estilo para la sección "información" */
+/* Sección Información */
 #informacion {
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-right: 10%; /* Márgenes más amplios para mayor claridad visual */
+    margin-left: 10%;
 }
 
-/* Estilo para el encabezado <h2> dentro de la sección "información" */
 #informacion h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espaciado inferior entre el título y el contenido */
+    text-align: center; /* Centra los títulos h2 */
 }
 
+/* Navegación */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -49,7 +58,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 20px 40px; /* Mantiene el tamaño grande de los botones */
+    padding: 20px 20px; /* Padding reducido para hacer los botones más estrechos */
     display: block;
     background-color: #153f5a;
     border-radius: 10px;
@@ -63,23 +72,27 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+/* Secciones Generales */
 section {
-    padding: 20px;
+    padding: 40px; /* Más espacio alrededor de las secciones */
 }
 
 h2 {
     color: #265d82;
-    text-align: center;
+    text-align: center; /* Centra todos los títulos h2 */
 }
 
-/* Centrado del título de la Galería */
+h3, h4, h5, h6 {
+    text-align: center; /* Centra todos los demás títulos */
+}
+
+/* Galería de Imágenes */
 .titulo-galeria {
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 20px;
 }
 
-/* Estilos de la Galería */
 .slider {
     width: 100%;
     max-width: 800px;
@@ -100,15 +113,13 @@ h2 {
 .slide img {
     width: 100%;
     height: auto;
-    margin: 0 auto;
-    display: block;
 }
 
 /* Footer */
 #footer {
     background-color: #ffffff;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 .footer-content {
@@ -180,8 +191,8 @@ footer img {
     }
 
     nav ul li a {
-        font-size: 1.8em;
-        padding: 15px 30px;
+        font-size: 1.5em; /* Tamaño de fuente legible */
+        padding: 15px 10px; /* Padding reducido: 10px en los lados */
     }
 
     #informacion {
@@ -212,8 +223,8 @@ footer img {
     }
 
     nav ul li a {
-        font-size: 1.5em;
-        padding: 12px 24px;
+        font-size: 1em; /* Tamaño de fuente más pequeño */
+        padding: 12px 8px; /* Padding aún más estrecho: 8px en los lados */
     }
 
     #informacion {
@@ -290,4 +301,3 @@ footer img {
 .arrow:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
-
