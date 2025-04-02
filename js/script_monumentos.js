@@ -42,3 +42,12 @@ showSlide(currentIndex);
 // Agregar funcionalidad a los botones de las flechas
 document.querySelector('.arrow.left').addEventListener('click', () => moveSlide(-1));
 document.querySelector('.arrow.right').addEventListener('click', () => moveSlide(1));
+
+// Agregar funcionalidad para las flechas del teclado
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+        moveSlide(-1); // Mover hacia atrás con la flecha izquierda
+    } else if (event.key === 'ArrowRight') {
+        moveSlide(1); // Mover hacia adelante con la flecha derecha
+    }
+});
