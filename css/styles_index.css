@@ -393,6 +393,7 @@
     margin-bottom: 15px;
 }
 
+
 /* Centrar los botones en dispositivos móviles */
 @media screen and (max-width: 768px) {
     #mapa .button {
@@ -402,8 +403,23 @@
         width: 75%; /* Ajustar el ancho del botón */
         margin-bottom: 15px; /* Espacio entre los botones */
     }
-
+	
     #mapa .button:last-child {
         margin-bottom: 0; /* Elimina el margen inferior del último botón */
     }
+
+	#mapa .button {
+        display: block; /* Asegura que se comporten como bloques */
+        margin: 0 auto; /* Centra horizontalmente */
+        text-align: center; /* Centra el contenido del botón */
+        width: 75%; /* Ajustar el ancho del botón */
+        margin-bottom: 15px; /* Espacio entre los botones */
+    }
+
+	a#vermas {
+		display: block;
+		margin: 0 auto; /* Centra horizontalmente */
+        text-align: center; /* Centra el contenido del botón */
+        width: 75%; /* Ajustar el ancho del botón */
+	}
 }
