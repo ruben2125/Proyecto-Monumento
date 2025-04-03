@@ -1,6 +1,11 @@
 #header > a[href="#menu"] {
 	display: inline;
   }
+
+#header a {
+    font-size: 2em; /* Ajusta el tamaño de la fuente */
+    color: #fff; /* Opcional: ajusta el color si es necesario */
+}
   
   /* Menu */
   
@@ -119,6 +124,11 @@
 	#menu .close {
 	  right: 0.5em;
 	  top: 0.5em;
+	}
+
+	#header a {
+		font-size: 1em; /* Ajusta el tamaño de la fuente */
+		color: #fff; /* Opcional: ajusta el color si es necesario */
 	}
   }
   
@@ -342,11 +352,11 @@
 
 .close {
 	position: absolute;
-	top: 75px;
-	right: 35px;
+	top: 50px;
+	right: 14px;
 	color: #f1f1f1;
-	font-weight: bold;
 	transition: 0.3s;
+	font-size: 2em;
 }
 
 .close:hover,
