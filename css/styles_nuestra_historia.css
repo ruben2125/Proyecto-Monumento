@@ -1,0 +1,309 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: justify; /* Justifica el texto en todo el cuerpo */
+}
+
+/* Estilo para los párrafos */
+p {
+    font-size: 16px; /* Tamaño de fuente estándar */
+    line-height: 1.8; /* Aumenta la altura de línea para mayor legibilidad */
+    margin: 20px 10%; /* Márgenes más amplios a izquierda y derecha */
+}
+
+/* Encabezado */
+header {
+    background-color: #265d82;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em; /* Título más grande que los botones */
+}
+
+/* Sección Información y Orígenes */
+#informacion, #origenes {
+    margin-right: 10%; /* Márgenes amplios */
+    margin-left: 10%;
+}
+
+#informacion h2, #origenes h2 {
+    margin-bottom: 20px; /* Espaciado inferior entre el título y el contenido */
+    text-align: center; /* Centra los títulos h2 */
+}
+
+#informacion p, #origenes p {
+    font-size: 16px; /* Tamaño de fuente estándar */
+    line-height: 1.8; /* Altura de línea para mayor legibilidad */
+    margin: 20px 10%; /* Márgenes amplios izquierda y derecha */
+    text-align: justify; /* Justifica el texto */
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Alinea los botones horizontalmente */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Espaciado entre botones */
+}
+
+nav ul li {
+    width: auto; /* Ajusta el ancho automáticamente según el contenido */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px; /* Padding reducido para hacer los botones más estrechos */
+    display: block;
+    background-color: #153f5a;
+    border-radius: 10px;
+    font-size: 2em; /* Tamaño grande para los botones */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1a4a6d;
+    transform: scale(1.05);
+}
+
+/* Secciones Generales */
+section {
+    padding: 40px; /* Más espacio alrededor de las secciones */
+}
+
+h2 {
+    color: #265d82;
+    text-align: center; /* Centra todos los títulos h2 */
+}
+
+h3, h4, h5, h6 {
+    text-align: center; /* Centra todos los demás títulos */
+}
+
+/* Galería de Imágenes */
+.titulo-galeria {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.slider {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+#footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 600px;
+}
+
+#footer p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+footer img {
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Media queries para responsividad */
+@media screen and (max-width: 1280px) {
+    .footer-content {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    #informacion {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+
+    .logo {
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    nav ul li a {
+        font-size: 1.5em; /* Tamaño de fuente legible */
+        padding: 15px 10px; /* Padding reducido: 10px en los lados */
+    }
+
+    #informacion {
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+
+    .slide img {
+        width: 80%;
+    }
+
+    #footer {
+        padding: 15px 0;
+    }
+
+    .logo {
+        max-width: 350px;
+    }
+
+    #footer p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li a {
+        font-size: 1em; /* Tamaño de fuente más pequeño */
+        padding: 12px 8px; /* Padding aún más estrecho: 8px en los lados */
+    }
+
+    #informacion {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .slide img {
+        width: 100%;
+    }
+
+    #footer {
+        padding: 10px 0;
+    }
+
+    footer img {
+        content: url("../images/footer-mob.jpg");
+        max-height: 80px;
+    }
+
+    .logo {
+        max-width: 100%;
+    }
+
+    #footer p {
+        font-size: 12px;
+    }
+}
+
+/* Estilo para la galería y las flechas */
+.slider {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    height: auto;
+}
+
+/* Estilo de las flechas */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
