@@ -307,3 +307,10 @@ footer img {
 .arrow:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+.img-normalizada {
+    width: 400px; /* Ancho fijo */
+    height: 400px; /* Alto fijo */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo proporciones */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+  }
