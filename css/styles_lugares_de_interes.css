@@ -67,6 +67,71 @@ header h1 {
     text-align: justify; /* Justifica el texto */
 }
 
+/* Reemplaza el .img-normalizada existente por este nuevo bloque */
+.img-normalizada {
+    width: 100%; /* Ancho completo del contenedor */
+    max-width: 800px; /* Máximo ancho en pantallas grandes */
+    height: auto; /* Altura automática proporcional */
+    margin: 25px auto; /* Centrado vertical y horizontal */
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* Nuevos estilos específicos para la imagen de senderismo */
+#senderismo img.img-normalizada {
+    max-width: 100%; /* Responsive por defecto */
+    border: 3px solid #265d82;
+    padding: 5px;
+    background: #fff;
+}
+
+/* Efecto hover para interactividad */
+#senderismo img.img-normalizada:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Media Queries específicas para imágenes */
+@media screen and (max-width: 980px) {
+    .img-normalizada {
+        max-width: 90%;
+        border-radius: 10px;
+        margin: 20px auto;
+    }
+    
+    #senderismo img.img-normalizada {
+        border-width: 2px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .img-normalizada {
+        max-width: 95%;
+        border-radius: 8px;
+        margin: 15px auto;
+    }
+    
+    #senderismo img.img-normalizada {
+        border-width: 1.5px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .img-normalizada {
+        max-width: 100%;
+        border-radius: 6px;
+        margin: 10px 0;
+    }
+    
+    #senderismo img.img-normalizada {
+        border-width: 1px;
+        padding: 3px;
+    }
+}
+
 /* Navegación */
 nav ul {
     list-style-type: none;
