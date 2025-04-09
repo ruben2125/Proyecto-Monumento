@@ -262,6 +262,17 @@ footer img {
     .logo {
         max-width: 450px;
     }
+
+    .img-normalizada {
+        width: 100%; /* Ancho completo del contenedor */
+        max-width: 800px; /* Máximo ancho en pantallas grandes */
+        height: auto; /* Altura automática proporcional */
+        margin: 25px auto; /* Centrado vertical y horizontal */
+        display: block;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
 }
 
 @media screen and (max-width: 736px) {
@@ -303,6 +314,17 @@ footer img {
 
     #footer p {
         font-size: 13px;
+    }
+
+    .img-normalizada {
+        width: 100%; /* Ancho completo del contenedor */
+        max-width: 800px; /* Máximo ancho en pantallas grandes */
+        height: auto; /* Altura automática proporcional */
+        margin: 25px auto; /* Centrado vertical y horizontal */
+        display: block;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
     }
 }
 
