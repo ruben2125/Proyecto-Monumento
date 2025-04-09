@@ -8,14 +8,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    text-align: justify; /* Justifica el texto en todo el cuerpo */
+    text-align: justify;
 }
 
 /* Estilo para los párrafos */
 p {
-    font-size: 16px; /* Tamaño de fuente estándar */
-    line-height: 1.8; /* Aumenta la altura de línea para mayor legibilidad */
-    margin: 20px 10%; /* Márgenes más amplios a izquierda y derecha */
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 20px 10%;
 }
 
 /* Encabezado */
@@ -28,107 +28,100 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 3em; /* Título más grande que los botones */
+    font-size: 3em;
 }
 
 /* Sección Patrimonio y Cultura */
 #patrimonioycultura {
-    margin-right: 10%; /* Márgenes amplios */
+    margin-right: 10%;
     margin-left: 10%;
 }
 
 #patrimonioycultura h2 {
-    margin-bottom: 20px; /* Espaciado inferior entre el título y el contenido */
-    text-align: center; /* Centra los títulos h2 */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 #patrimonioycultura p {
-    font-size: 16px; /* Tamaño de fuente estándar */
-    line-height: 1.8; /* Altura de línea para mayor legibilidad */
-    margin: 20px 10%; /* Márgenes amplios izquierda y derecha */
-    text-align: justify; /* Justifica el texto */
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 20px 10%;
+    text-align: justify;
 }
 
-/* Sección Sebderismo */
+/* Sección Senderismo */
 #senderismo {
-    margin-right: 10%; /* Márgenes amplios */
+    margin-right: 10%;
     margin-left: 10%;
 }
 
 #senderismo h2 {
-    margin-bottom: 20px; /* Espaciado inferior entre el título y el contenido */
-    text-align: center; /* Centra los títulos h2 */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 #senderismo p {
-    font-size: 16px; /* Tamaño de fuente estándar */
-    line-height: 1.8; /* Altura de línea para mayor legibilidad */
-    margin: 20px 10%; /* Márgenes amplios izquierda y derecha */
-    text-align: justify; /* Justifica el texto */
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 20px 10%;
+    text-align: justify;
 }
 
-/* Reemplaza el .img-normalizada existente por este nuevo bloque */
 .img-normalizada {
-    width: 100%; /* Ancho completo del contenedor */
-    max-width: 800px; /* Máximo ancho en pantallas grandes */
-    height: auto; /* Altura automática proporcional */
-    margin: 25px auto; /* Centrado vertical y horizontal */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 25px auto;
     display: block;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
 }
 
-/* Nuevos estilos específicos para la imagen de senderismo */
 #senderismo img.img-normalizada {
-    max-width: 100%; /* Responsive por defecto */
+    max-width: 100%;
     border: 3px solid #265d82;
     padding: 5px;
     background: #fff;
 }
 
-/* Efecto hover para interactividad */
 #senderismo img.img-normalizada:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-/* Media Queries específicas para imágenes */
-@media screen and (max-width: 980px) {
-    .img-normalizada {
-        max-width: 90%;
-        border-radius: 10px;
-        margin: 20px auto;
+/* Media Queries para reducir márgenes en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    p {
+        margin: 20px 5%; /* Márgenes reducidos para párrafos */
     }
-    
-    #senderismo img.img-normalizada {
-        border-width: 2px;
-    }
-}
 
-@media screen and (max-width: 736px) {
-    .img-normalizada {
-        max-width: 95%;
-        border-radius: 8px;
-        margin: 15px auto;
+    h2 {
+        margin-left: 5%; /* Márgenes reducidos para h2 */
+        margin-right: 5%;
     }
-    
-    #senderismo img.img-normalizada {
-        border-width: 1.5px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+
+    #patrimonioycultura,
+    #senderismo {
+        margin-left: 5%; /* Márgenes reducidos para las secciones */
+        margin-right: 5%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .img-normalizada {
-        max-width: 100%;
-        border-radius: 6px;
-        margin: 10px 0;
+    p {
+        margin: 20px 2%; /* Márgenes aún más reducidos para párrafos */
     }
-    
-    #senderismo img.img-normalizada {
-        border-width: 1px;
-        padding: 3px;
+
+    h2 {
+        margin-left: 2%; /* Márgenes aún más reducidos para h2 */
+        margin-right: 2%;
+    }
+
+    #patrimonioycultura,
+    #senderismo {
+        margin-left: 2%; /* Márgenes aún más reducidos para las secciones */
+        margin-right: 2%;
     }
 }
 
@@ -136,23 +129,23 @@ header h1 {
 nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex; /* Alinea los botones horizontalmente */
-    justify-content: center; /* Centra los botones horizontalmente */
-    gap: 20px; /* Espaciado entre botones */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
-    width: auto; /* Ajusta el ancho automáticamente según el contenido */
+    width: auto;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 20px 20px; /* Padding reducido para hacer los botones más estrechos */
+    padding: 20px 20px;
     display: block;
     background-color: #153f5a;
     border-radius: 10px;
-    font-size: 2em; /* Tamaño grande para los botones */
+    font-size: 2em;
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -164,16 +157,16 @@ nav ul li a:hover {
 
 /* Secciones Generales */
 section {
-    padding: 40px; /* Más espacio alrededor de las secciones */
+    padding: 40px;
 }
 
 h2 {
     color: #265d82;
-    text-align: center; /* Centra todos los títulos h2 */
+    text-align: center;
 }
 
 h3, h4, h5, h6 {
-    text-align: center; /* Centra todos los demás títulos */
+    text-align: center;
 }
 
 /* Galería de Imágenes */
@@ -264,10 +257,10 @@ footer img {
     }
 
     .img-normalizada {
-        width: 100%; /* Ancho completo del contenedor */
-        max-width: 800px; /* Máximo ancho en pantallas grandes */
-        height: auto; /* Altura automática proporcional */
-        margin: 25px auto; /* Centrado vertical y horizontal */
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        margin: 25px auto;
         display: block;
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -291,8 +284,8 @@ footer img {
     }
 
     nav ul li a {
-        font-size: 1.5em; /* Tamaño de fuente legible */
-        padding: 15px 10px; /* Padding reducido: 10px en los lados */
+        font-size: 1.5em;
+        padding: 15px 10px;
     }
 
     #informacion {
@@ -317,10 +310,10 @@ footer img {
     }
 
     .img-normalizada {
-        width: 100%; /* Ancho completo del contenedor */
-        max-width: 800px; /* Máximo ancho en pantallas grandes */
-        height: auto; /* Altura automática proporcional */
-        margin: 25px auto; /* Centrado vertical y horizontal */
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        margin: 25px auto;
         display: block;
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -334,8 +327,8 @@ footer img {
     }
 
     nav ul li a {
-        font-size: 1em; /* Tamaño de fuente más pequeño */
-        padding: 12px 8px; /* Padding aún más estrecho: 8px en los lados */
+        font-size: 1em;
+        padding: 12px 8px;
     }
 
     #informacion {
@@ -414,8 +407,17 @@ footer img {
 }
 
 .img-normalizada {
-    width: 400px; /* Ancho fijo */
-    height: 400px; /* Alto fijo */
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo proporciones */
-    border-radius: 8px; /* Opcional: bordes redondeados */
+    object-fit: contain;
+    border-radius: 8px;
   }
+
+/* Media Query para pantallas de ordenador (ej: > 1024px) */
+@media screen and (min-width: 1025px) {
+    .img-normalizada {
+        max-width: 600px; /* Nuevo tamaño máximo para ordenadores */
+    }
+    
+    #senderismo img.img-normalizada {
+        max-width: 600px; /* Mantener consistencia en la sección senderismo */
+    }
+}
