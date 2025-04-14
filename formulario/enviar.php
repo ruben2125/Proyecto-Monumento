@@ -1,48 +1,73 @@
 <?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
-if ($_POST) {
-    $nombre = $_POST['nombre'];
-    $cif = $_POST['cif'];
-    $telefono = $_POST['telefono'];
-    $email = $_POST['email'];
-    $mensaje = $_POST['mensaje'];
-}
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-//Load Composer's autoloader
+// Cargar el autoloader de Composer
 require '../libs/vendor/autoload.php';
 
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
+// Verifica que el formulario haya sido enviado por POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Comprobar que todos los campos requeridos están presentes
+    if (
+        isset($_POST['nombre'], $_POST['telefono'], $_POST['email'], $_POST['asunto'], $_POST['descripcion'])
+        && !empty($_POST['nombre'])
+        && !empty($_POST['telefono'])
+        && !empty($_POST['email'])
+        && !empty($_POST['asunto'])
+        && !empty($_POST['descripcion'])
+    ) {
+        // Recoger los datos del formulario
+        $nombre = $_POST['nombre'];
+        $telefono = $_POST['telefono'];
+        $email = $_POST['email'];
+        $asunto = $_POST['asunto'];
+        $mensaje = $_POST['descripcion'];
 
-try {
-    //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                        //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                    //Enable SMTP authentication
-    $mail->Username   = 'castillolaguardiadejaen@gmail.com';        //SMTP username
-    $mail->Password   = 'kmcbojiixgkpcokn';                       //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;             //Enable implicit TLS encryption
-    $mail->Port       = 465;                                     //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        // Crear una instancia de PHPMailer
+        $mail = new PHPMailer(true);
 
-    //Recipients
-    $mail->setFrom('remitente@gmail.com', 'Solicitante empresas');
-    $mail->addAddress('castillolaguardiadejaen@gmail.com', 'Guia de empresas'); //Add a recipient
+        try {
+            // Configuración del servidor
+            $mail->SMTPDebug = 0; // Cambia a SMTP::DEBUG_SERVER para ver detalles en desarrollo
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'castillolaguardiadejaen@gmail.com';
+            $mail->Password   = 'kmcbojiixgkpcokn'; // Usa contraseña de aplicación si tienes 2FA
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port       = 465;
 
-    //Content
-    $mail->isHTML(true);                                        //Set email format to HTML
-    $mail->Subject = "Nombre: " . $nombre;
-    $mail->Body = "CIF: " . $cif . "<br>Teléfono: " . $telefono . "<br>Email: " . $email . "<br>Mensaje: " . $mensaje;
+            // Destinatarios
+            $mail->setFrom('remitente@gmail.com', 'Solicitante Web');
+            $mail->addAddress('castillolaguardiadejaen@gmail.com', 'Guía Monumentos');
 
-    $mail->send();
-    header("Location:formularioalta.html");
-    echo("Correo enviado con éxito.");
-} catch (Exception $e) {
-    echo "Error en el envío: {$mail->ErrorInfo}";
+            // Contenido
+            $mail->isHTML(true);
+            $mail->Subject = "Formulario de contacto: " . $asunto;
+            $mail->Body    = "
+                <strong>Nombre:</strong> $nombre<br>
+                <strong>Teléfono:</strong> $telefono<br>
+                <strong>Email:</strong> $email<br>
+                <strong>Mensaje:</strong><br>$mensaje
+            ";
+
+            // Enviar correo
+            $mail->send();
+
+            // Redirigir a una página de confirmación
+            header("Location: formularioalta.html");
+            exit;
+
+        } catch (Exception $e) {
+            echo "El mensaje no se pudo enviar. Error de Mailer: {$mail->ErrorInfo}";
+        }
+
+    } else {
+        echo "Por favor, completa todos los campos requeridos.";
+    }
+
+} else {
+    echo "Acceso no permitido.";
 }
 ?>
