@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
             $mail->Username   = 'castillolaguardiadejaen@gmail.com';
-            $mail->Password   = 'kmcbojiixgkpcokn'; // Usa contraseña de aplicación si tienes 2FA
+            $mail->Password   = 'kmcbojiixgkbcokn'; // Usa contraseña de aplicación si tienes 2FA
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = 465;
 
